@@ -1,0 +1,13 @@
+Inter-VLAN routing using multiple layer switches offers several benefits:
+
+1.⁠ ⁠*Performance*: Layer 3 switches can route between VLANs at wire speed, which means minimal latency and high throughput compared to traditional routers.
+
+2.⁠ ⁠*Cost-effectiveness*: Layer 3 switches are typically less expensive than dedicated routers, especially for smaller-scale deployments.
+
+3.⁠ ⁠*Simplicity*: By integrating routing capabilities into switches, network administrators can manage VLANs and routing configurations in a single device, simplifying network architecture and reducing points of failure.
+
+4.⁠ ⁠*Security*: Inter-VLAN routing using layer 3 switches can enforce security policies and access controls at the network edge, enhancing overall network security by segmenting traffic between VLANs.
+
+5.⁠ ⁠*Convergence*: Layer 3 switches support convergence of voice, video, and data traffic by efficiently routing between VLANs, ensuring quality of service (QoS) and prioritization policies are enforced effectively.
+
+Overall, inter-VLAN routing using multiple layer switches provides a robust and efficient way to manage VLANs within a network, offering both performance benefits and enhanced security capabilities
