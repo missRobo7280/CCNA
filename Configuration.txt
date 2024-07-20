@@ -1,0 +1,78 @@
+=== S1 configuration ===
+
+ enable
+configure terminal
+vlan 10
+exit
+vlan 20
+exit
+interface fastethernet 0/1
+switchport mode access
+switchport access vlan 10
+exit
+interface fastethernet 0/2
+switchport mode access
+switchport access vlan 20
+exit
+interface gigabitethernet 0/1
+switchport mode trunk
+switchport trunk allowed vlan 10-20
+exit
+exit
+copy running-config startup-config
+
+PC-0 IP Address - 192.168.10.2
+	  Gateway - 192.168.10.1
+PC-1 IP Address - 192.168.20.2
+	Gateway - 192.168.20.1
+
+
+=== S2 configuration ===
+
+ enable
+configure terminal
+vlan 10
+exit
+vlan 20
+exit
+interface fastethernet 0/1
+switchport mode access
+switchport access vlan 10
+exit
+interface fastethernet 0/2
+switchport mode access
+switchport access vlan 20
+exit
+interface gigabitethernet 0/1
+switchport mode trunk
+switchport trunk allowed vlan 10-20
+exit
+exit
+copy running-config startup-config
+
+PC-2 IP Address - 192.168.10.3
+	  Gateway - 192.168.10.1
+PC-3 IP Address - 192.168.20.3
+	Gateway - 192.168.20.1
+
+
+
+=== MLS configuration ===
+
+
+enable
+ip routing
+vlan 10
+exit
+Vlan 20
+exit
+interface vlan 10
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+exit
+interface plan 20
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+exit
+ip routing
+copy running-config startup-config
